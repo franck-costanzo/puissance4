@@ -12,3 +12,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `loss` int(5) DEFAULT 0,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `games` (
+  `id_game` int(11) AUTO_INCREMENT NOT NULL,
+  `game_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `gamer1` varchar(255) NOT NULL,
+  `gamer2` varchar(255),
+  PRIMARY KEY (`id_game`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

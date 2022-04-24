@@ -100,8 +100,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
             colorStyle = 'yellow'
         }
 
-        activePlayerDiv.innerText = playerPlaying + " |  turn :" + playerCount;
-        activePlayerDiv.style.color = colorStyle;
+        if (activePlayerDiv != null)
+        {
+            activePlayerDiv.innerText = playerPlaying + " |  turn :" + playerCount;
+            activePlayerDiv.style.color = colorStyle;
+        }
+        
     }
 
     setActivePlayerDiv();
@@ -158,7 +162,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         //turn the set into an array to easily iterate over
         let horizontalArray = Array.from(horizontalSet);
-        console.log(horizontalArray);
 
         //loop 4 times since there can be only four possibe winning combination in each horizontal line
         for (let i = 0; i<4; i++)
@@ -235,7 +238,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         {
             if( boxes[i].hasChildNodes() == true)
             {
-                console.log(boxes[i].hasChildNodes());
                 boardCount++
             }
         }
@@ -331,5 +333,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
 
     }    
+
 
 })

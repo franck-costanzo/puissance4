@@ -29,6 +29,33 @@
     width: 100%;
 }
 
+.lobbyBoard {
+    min-height: 75vh;
+}
+
+#overlay {
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.8) ;
+}
+
+#modal {
+    max-width: 600px;
+    height: 300px;
+    margin: auto!important;
+    background-color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px!important;
+}
+
 @media screen and (max-width: 750px){
 
     .gameRow {
@@ -39,7 +66,6 @@
         min-width: 50px;
     }
 
-
     .playerOne {
         border-radius: 25px;
     }
@@ -47,4 +73,9 @@
     .playerTwo {
         border-radius: 25px;
     }
+
+    .lobbyBoard {
+        min-height: 60vh;
+    }
+
 }

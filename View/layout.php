@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="View/CSS/style.css">
     <link rel="stylesheet" type="text/css" href="View/CSS/bootstrap.min.css">    
     <script src="./Js/script.js"></script>
+    <script src="./Js/overlayform.js"></script>
     <title><?= $title ?></title>
 </head>
 
@@ -19,6 +20,7 @@
                 <h1 class="text-light mx-3"><a href="index.php" class="text-decoration-none text-reset">Connect 4</a></h1>
                 <nav class="text-dark d-flex">
                     <?php if (isset($_SESSION['connected'])) : ?>
+                        <a href="lobby.php" class="btn btn-light mx-2 p-2  rounded-pill">Game Lobby</a>
                         <form method="POST">
                             <button type="submit" name="deconnexion" class="btn btn-light mx-2 p-2  rounded-pill" id="decoBtn">Disconnect
                             </button>
