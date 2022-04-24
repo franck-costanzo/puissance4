@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         //turn the set into an array to easily iterate over
         let horizontalArray = Array.from(horizontalSet);
+        console.log(horizontalArray);
 
         //loop 4 times since there can be only four possibe winning combination in each horizontal line
         for (let i = 0; i<4; i++)
@@ -267,7 +268,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     for(let i=1; i<=columns.length; i++)
     {
         //give an id to each column
-        columns[i-1].setAttribute('id', i);
+        columns[i-1].setAttribute('id', "c"+i);
 
         //add event listener for each column
         columns[i-1].addEventListener('click', () =>{
